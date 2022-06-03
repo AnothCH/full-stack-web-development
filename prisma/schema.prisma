@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/qanda"
+}
+
+model questionnaire {
+  id             Int     @id @default(autoincrement())
+  question       String
+  ans1           String
+  ans2           String
+  ans3           String?
+  ans4           String?
+  ans5           String?
+  ans6           String?
+  correct_answer String
+  correct        Int     @default(0)
+  incorrect      Int     @default(0)
+}

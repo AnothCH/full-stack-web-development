@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `questionnaire` ADD COLUMN `correct` INTEGER NOT NULL DEFAULT 0,
+    ADD COLUMN `incorrect` INTEGER NOT NULL DEFAULT 0;
